@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: dev
-          token: ${{ secrets.ACCESS_TOKEN }}
-          ssh-key: ${{ secrets.SSH_PRIVATE }}
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+        # with:
+        #   ref: dev
+        #   token: ${{ secrets.ACCESS_TOKEN }}
+        #   ssh-key: ${{ secrets.SSH_PRIVATE }}
+        #   fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
