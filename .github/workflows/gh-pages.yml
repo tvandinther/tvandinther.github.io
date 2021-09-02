@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        # with:
-        #   ref: dev
-        #   token: ${{ secrets.ACCESS_TOKEN }}
-        #   ssh-key: ${{ secrets.SSH_PRIVATE }}
-        #   fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+        with:
+          ref: master
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -45,5 +45,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY  }}
           publish_dir: ./public
           publish_branch: gh-pages
