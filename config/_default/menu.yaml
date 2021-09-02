@@ -1,0 +1,15 @@
+navbar:
+- identifier: "tags"
+  name: "Tags"
+  url: "/tags/"
+  weight: 50
+
+- identifier: "categories"
+  name: "Categories"
+  url: "/categories/"
+  weight: 55
+  
+- identifier: "series"
+  name: "Series"
+  url: "/series/"
+  weight: 60
