@@ -1,0 +1,17 @@
+baseURL: '/'
+languageCode: 'en-us'
+title: 'MIOI Blog'
+theme: "hugo-theme-monochrome"
+googleAnalytics: "G-8PPBKZ5GD1"
+disqusShortname: "mioi"
+enableRobotsTXT: true
+
+build:
+  writeStats: true
+
+markup.highlight:
+  codeFences: true
+  lineNos: true
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]

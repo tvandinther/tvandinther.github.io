@@ -29,7 +29,7 @@
 
                 {{- block "content" . }}{{- end }}
 
-                {{ if eq .Kind "page" }}
+                {{ if and (eq .Kind "page") .Params.comments}}
                     {{ if (.Params.disqus | default .Site.DisqusShortname) }}
                         {{- partial "disqus.html" . -}}
                     {{ end }}
