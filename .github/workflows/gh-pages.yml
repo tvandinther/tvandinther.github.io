@@ -40,7 +40,7 @@ jobs:
         run: rm -rf ./public/*
 
       - name: Build
-        run: hugo --environment --minify production -b https://blog.mioi.io
+        run: hugo --environment production --minify -b https://blog.mioi.io
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
