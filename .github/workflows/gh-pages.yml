@@ -34,10 +34,10 @@ jobs:
         run: npm install --prefix exampleSite
 
       - name: Setup public
-        run: git worktree add -B gh-pages ./public origin/gh-pages
+        run: git worktree add -B gh-pages ./public
 
       - name: Clean public
-        run: rm -rf ./exampleSite/public/*
+        run: rm -rf ./public/*
 
       - name: Build
         run: hugo --environment production --minify
