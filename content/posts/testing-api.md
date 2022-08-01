@@ -1,7 +1,7 @@
 ---
 title: "Testing Web APIs"
 description: "This post describes basic high-level testing strategy for web APIs."
-date: 2021-09-02T12:59:47+12:00
+date: 2022-08-01T16:20:23+12:00
 draft: false
 author: "Tom van Dinther"
 prism_lineno: false
