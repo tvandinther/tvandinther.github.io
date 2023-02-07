@@ -1,3 +1,13 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES6",
+    "lib": ["ESNext", "DOM"],
+    "strictNullChecks": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+    }
+  },
 }

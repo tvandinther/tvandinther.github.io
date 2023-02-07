@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
 title: "Testing Web APIs"
 description: "This post describes basic high-level testing strategy for web APIs."
 date: 2022-08-01T16:20:23+12:00
@@ -13,12 +12,11 @@ tags: ["testing", "API"]
 categories: ["testing"]
 #comments: true
 ---
-
 Testing a web API can appear to be quite different from testing a console application. While many of the same core elements exist in a web API, they also take on a new disguise. We will go over the high level structure of a web API and what some of the testing boundaries might be, and when you might want to test at each boundary.
 
 A web API in many frameworks and languages follows a structure similar to the diagram shown below.
 
-![api_testing_1.png](../../resources/api_testing_1.png)
+![api_testing_1.png](/assets/images/api_testing_1.png)
 
 In the diagram, the **network** refers to the outside world, specifically a network interface such as localhost or the external adapter. 
 
@@ -69,7 +67,7 @@ If we were to test from the middleware or endpoint boundary while using real imp
 
 ## Databases
 
-![api_testing_2.png](../../resources/api_testing_2.png)
+![api_testing_2.png](/assets/images/api_testing_2.png)
 
 I have a database, do I test this? No, but also yes. Including the database in your testing would qualify as an end-to-end test if going from the network boundary, and another form of integration test if going from the service boundary. For good, malleable, fast-running tests you will want to mock out the database by using an in-memory repository.
 
@@ -81,4 +79,4 @@ It is always a good idea to include a few end-to-end tests for an application th
 
 A common stack for performing an end-to-end test on a web API and database is to have three containers. The first is the database, the second is the web API and the third container is the test-suite using an HTTP client to access the web API. You can configure two separate networks to closely resemble a secure production environment where backend services such as databases are not discoverable by clients. The diagram below shows what such a container stack might look like and their networks.
 
-![api_testing_3.png](../../resources/api_testing_3.png)
+![api_testing_3.png](/assets/images/api_testing_3.png)
