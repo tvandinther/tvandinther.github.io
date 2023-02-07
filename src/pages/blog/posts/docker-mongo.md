@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../../layouts/MarkdownPostLayout.astro
 title: "Creating a MongoDB instance with a web interface in Docker"
 description: "This post covers how to create a MongoDB instance with a web interface in Docker."
 date: 2021-09-02T12:59:47+12:00

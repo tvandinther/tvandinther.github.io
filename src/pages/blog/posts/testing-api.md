@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../../layouts/MarkdownPostLayout.astro
 title: "Testing Web APIs"
 description: "This post describes basic high-level testing strategy for web APIs."
 date: 2022-08-01T16:20:23+12:00
