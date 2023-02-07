@@ -1,0 +1,14 @@
+---
+type Props = {
+    path: string,
+    title: string,
+}
+
+const { path, title } = Astro.props;
+---
+<a 
+    class="m-1 bg-gray-300 p-1 hover:bg-gray-400"
+    href={path}
+>
+    {title}
+</a>

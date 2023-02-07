@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+const allPosts = await getCollection('blog');
+const allTags = allPosts.map((post) => post.data.tags).flat();
+const tagCount = allTags.reduce((acc, tag) => {
+  acc[tag] = (acc[tag] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const pageTitle = "Tag Index";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div class="flex">
+      {Object.entries(tagCount).map(([tag, count]) => (
+              <p class="m-1 underline hover:text-blue-400"><a href={`tags/${tag}`}>{tag} ({count})</a></p>
+      ))}
+    </div>
+</BaseLayout>

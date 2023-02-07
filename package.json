@@ -18,5 +18,8 @@
   "engines": {
     "yarn": ">=1.22.0",
     "node": "18.14.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9"
   }
 }

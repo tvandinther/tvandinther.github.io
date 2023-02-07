@@ -2,6 +2,7 @@
 title: "Testing Web APIs"
 description: "This post describes basic high-level testing strategy for web APIs."
 date: 2022-08-01T16:20:23+12:00
+lastUpdated: 2023-02-08T00:03:00+13:00
 draft: false
 author: "Tom van Dinther"
 image:
@@ -75,7 +76,7 @@ An important detail to consider is if you are using an object relational mapper 
 
 ## End-to-end testing
 
-It is always a good idea to include a few end-to-end tests for an application that presents a web API and uses a persistence layer. To orchestrate these tests you may find that using Docker simplifies the process. Docker offers a `docker-compose` command-line utility which allows you to declaratively define a stack of containers together.
+It is always a good idea to include a few end-to-end tests for an application that presents a web API and uses a persistence layer. To orchestrate these tests you may find that using Docker simplifies the process. Docker offers a `docker compose` action which allows you to declaratively define a stack of containers together.
 
 A common stack for performing an end-to-end test on a web API and database is to have three containers. The first is the database, the second is the web API and the third container is the test-suite using an HTTP client to access the web API. You can configure two separate networks to closely resemble a secure production environment where backend services such as databases are not discoverable by clients. The diagram below shows what such a container stack might look like and their networks.
 

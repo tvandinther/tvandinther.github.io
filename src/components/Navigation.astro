@@ -1,6 +1,10 @@
 ---
+import NavigationLink from "./NavigationLink.astro";
+
 
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<div class="flex">
+    <NavigationLink path="/" title="Home" />
+    <NavigationLink path="/blog/" title="Blog" />
+    <NavigationLink path="/about/" title="About" />
+</div>
