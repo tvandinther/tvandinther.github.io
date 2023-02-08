@@ -3,9 +3,8 @@ import BlogPostItem from "@components/BlogPostItem.astro";
 import BlogLayout from "@layouts/BlogLayout.astro";
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection('blog');
-const pageTitle = "Blog";
 ---
-<BlogLayout pageTitle={pageTitle}>
+<BlogLayout pageTitle="Home">
   <div class="flex flex-col child:mt-3">
     {allPosts.map(post => <BlogPostItem post={post} />)}
   </div>
