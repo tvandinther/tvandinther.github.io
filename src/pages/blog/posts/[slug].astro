@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BlogLayout from "@layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    return allPosts.map((post) => ({
+        params: { slug: post.slug }, props: { post } 
+    }));
+}
+
+type Props = {
+    post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<BlogLayout pageTitle={post.data.title}>
+    <article class="my-8 w-full max-w-3xl m-auto prose lg:prose-lg prose-stone font-body">
+        <h1 class="text-4xl">{post.data.title}</h1>
+        <address class="text-lg italic">Written by {post.data.author}</address>
+        <time datetime={post.data.date.toString()}>{post.data.date.toLocaleDateString()}</time>
+        {post.data.lastUpdated && (
+            <p class="text-sm text-gray-500">Last updated: {post.data.lastUpdated.toLocaleDateString()}</p>
+        )}
+        <div class="m-2 flex">
+            {post.data.tags.map((tag) => (
+                <a href={`../tags/${tag}`} class="text-sm bg-gray-200 rounded-full px-3 py-1 text-gray-700 mr-2 hover:bg-gray-300">
+                    {tag}
+                </a>
+            ))}
+        </div>
+        <Content />
+    </article>
+</BlogLayout>
+  

@@ -1,0 +1,14 @@
+---
+import BlogNavigation from "@components/BlogNavigation.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = {
+    pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
+---
+<BaseLayout pageTitle={`mioi Blog | ${pageTitle}`}>
+    <BlogNavigation />
+    <slot />
+</BaseLayout>

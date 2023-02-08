@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+    post: CollectionEntry<"blog">
+    display?: "compact" | "full"
+}
+
+const { post, display = "full" } = Astro.props;
+---
+<div>
+    <a
+    class="flex flex-col justify-center bg-gray-100 rounded-md p-2 m-2 hover:shadow-lg shadow-md transition-all" 
+    href={`/blog/posts/${post.slug}`}>
+    <div class="flex justify-between">
+        <h1 class="m-1 text-lg lg:text-xl font-bold">{post.data.title}</h1>
+        <p class="m-1">{post.data.date.toLocaleDateString()}</p>
+    </div>    
+        {display == "full" && <div class="relative">
+            <p class="text-sm overflow-clip font-body">{post.body.slice(0, post.body.search('\n'))}</p>
+            <!-- <div class="h-8 absolute bottom-0 w-full bg-gradient-to-t from-gray-100"></div> -->
+        </div>}
+    </a>
+</div>

@@ -1,0 +1,15 @@
+---
+import Hamburger from "./Hamburger.astro";
+import NavigationMenu from "./NavigationMenu.astro";
+import SideNavigation from "./SideNavigation.astro";
+---
+<div>
+  <header class="flex bg-primary w-screen p-3">
+    <span class="font-display text-5xl text-page mr-8 ml-8 lg:ml-16">mioi.io</span>
+    <nav class="w-full">
+      <Hamburger />
+      <NavigationMenu />
+    </nav>
+</header>
+<SideNavigation />  
+</div>
