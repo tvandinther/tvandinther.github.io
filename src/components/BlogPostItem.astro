@@ -7,11 +7,15 @@ type Props = {
 
 const { post } = Astro.props;
 ---
-<div class="flex">
+<div>
     <a
-    class="flex flex-col justify-center items-center bg-gray-200 rounded-md p-2 m-2 hover:bg-gray-300" 
+    class="flex flex-col justify-center bg-gray-100 rounded-md p-2 m-2 hover:shadow-lg shadow-md transition-all" 
     href={`/blog/posts/${post.slug}`}>
-        <p class="m-1">{post.data.title}</p>
+        <h1 class="m-1 text-lg lg:text-xl">{post.data.title}</h1>
+        <div class="relative">
+            <p class="text-sm overflow-clip">{post.body.slice(0, post.body.search('\n'))}</p>
+            <!-- <div class="h-8 absolute bottom-0 w-full bg-gradient-to-t from-gray-100"></div> -->
+        </div>
         <p class="m-1">{post.data.date.toLocaleDateString()}</p>
     </a>
 </div>

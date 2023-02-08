@@ -18,15 +18,13 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 <BaseLayout pageTitle={post.data.title}>
-    <article class="my-8 max-w-4xl m-auto prose">
+    <article class="my-8 w-full max-w-3xl m-auto prose lg:prose-lg prose-stone">
         <h1 class="text-4xl">{post.data.title}</h1>
-        <h3 class="text-lg italic">Written by {post.data.author}</h3>
-        <div class="flex child:m-2">
-            <p class="text-sm text-gray-500">{post.data.date.toLocaleDateString()}</p>
-            {post.data.lastUpdated && (
-                <p class="text-sm text-gray-500">Last updated: {post.data.lastUpdated.toLocaleDateString()}</p>
-            )}
-        </div>
+        <address class="text-lg italic">Written by {post.data.author}</address>
+        <time datetime={post.data.date.toString()}>{post.data.date.toLocaleDateString()}</time>
+        {post.data.lastUpdated && (
+            <p class="text-sm text-gray-500">Last updated: {post.data.lastUpdated.toLocaleDateString()}</p>
+        )}
         <div class="m-2 flex">
             {post.data.tags.map((tag) => (
                 <a href={`../tags/${tag}`} class="text-sm bg-gray-200 rounded-full px-3 py-1 text-gray-700 mr-2 hover:bg-gray-300">

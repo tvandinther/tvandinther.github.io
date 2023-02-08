@@ -1,8 +1,12 @@
 ---
-import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+import NavigationMenu from "./NavigationMenu.astro";
+import SideNavigation from "./SideNavigation.astro";
 ---
-<header class="bg-gray-300 w-screen px-8 py-3">
-  <nav>
-    <Navigation />
-  </nav>
+<header>
+    <nav class="bg-primary w-screen px-8 py-3">
+      <Hamburger />
+      <NavigationMenu />
+    </nav>
+  <SideNavigation />  
 </header>
