@@ -3,3 +3,4 @@ public
 .idea/
 .astro
 package-lock.json
+dist/
