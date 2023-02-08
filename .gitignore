@@ -1,6 +1,6 @@
 node_modules
-public
 .idea/
 .astro
 package-lock.json
 dist/
+.DS_Store
