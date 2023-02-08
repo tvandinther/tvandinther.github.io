@@ -11,7 +11,7 @@ const tagCount = allTags.reduce((acc, tag) => {
 <BlogLayout pageTitle="Tags">
     <div class="flex">
       {Object.entries(tagCount).map(([tag, count]) => (
-              <p class="m-1 underline hover:text-blue-400"><a href={`tags/${tag}`}>{tag} ({count})</a></p>
+              <p class="m-1 underline hover:text-blue-400"><a href={`/blog/tags/${tag}`}>{tag} ({count})</a></p>
       ))}
     </div>
 </BlogLayout>
