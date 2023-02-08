@@ -260,8 +260,3 @@ networks:
   internal-network:
     driver: bridge # default, can be omitted
 ```
-## Related Posts
-- Creating service accounts with MongoDB in Docker
-- Change streams and replica sets with MongoDB in Docker
-- Docker: prepare for rendezvous
-- Creating a reverse proxy using docker-compose

@@ -1,13 +1,12 @@
 ---
 import BlogPostItem from "@components/BlogPostItem.astro";
-import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogLayout from "@layouts/BlogLayout.astro";
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection('blog');
 const pageTitle = "Blog";
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BlogLayout pageTitle={pageTitle}>
   <div class="flex flex-col child:mt-3">
     {allPosts.map(post => <BlogPostItem post={post} />)}
   </div>
-  <a class="p-4 block w-min text-page bg-secondary rounded-md" href="tags">Tags</a>  
-</BaseLayout>
+</BlogLayout>
