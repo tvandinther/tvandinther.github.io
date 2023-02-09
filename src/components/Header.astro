@@ -3,13 +3,20 @@ import Hamburger from "./Hamburger.astro";
 import NavigationMenu from "./NavigationMenu.astro";
 import SideNavigation from "./SideNavigation.astro";
 ---
-<div>
-  <header class="flex bg-primary w-screen p-3">
-    <span class="font-display text-5xl text-page mr-8 ml-8 lg:ml-16">mioi.io</span>
-    <nav class="w-full">
-      <Hamburger />
-      <NavigationMenu />
-    </nav>
+<header class="flex bg-primary w-screen p-3 h-16 sticky -top-16 [&.show]:top-0 transition-[top]">
+  <span class="font-display text-5xl text-page mr-8 ml-8 lg:ml-16">mioi.io</span>
+  <nav class="w-full">
+    <Hamburger />
+    <NavigationMenu />
+  </nav>
 </header>
-<SideNavigation />  
-</div>
+<SideNavigation />
+<script is:inline>
+  (function() {var p = window.pageYOffset;
+  const h = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    const c = window.pageYOffset;
+    p > c ? h.classList.add("show") : h.classList.remove("show");
+    p = c;
+  })})();
+</script>

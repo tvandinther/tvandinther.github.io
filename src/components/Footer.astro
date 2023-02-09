@@ -2,8 +2,17 @@
 const platform = "github";
 const username = "tvandinther";
 ---
-<footer class="w-screen bg-page">
+<footer class="w-screen bg-page sticky h-8 bottom-0 [&.hide]:-bottom-8 transition-[bottom]">
     <div class="px-8 py-1 bg-primary text-page">
         <p>Learn more about my projects on <a class="underline" target="_blank" href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
     </div>
 </footer>
+<script is:inline>
+    (function() {var p = window.pageYOffset;
+    const h = document.querySelector("footer");
+    window.addEventListener("scroll", () => {
+      const c = window.pageYOffset;
+      p < c ? h.classList.add("hide") : h.classList.remove("hide");
+      p = c;
+    })})();
+</script>
