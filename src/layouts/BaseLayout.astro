@@ -1,6 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import SideNavigation from "@components/SideNavigation.astro";
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -11,12 +12,14 @@ const { pageTitle } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Martian+Mono&family=Poiret+One&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1a202c" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 </head>
-<body class="bg-primary grid">
+<body class="bg-primary">
 <Header />
-<div class="px-8 py-4 bg-page rounded-tl-[2rem] lg:rounded-tl-[4rem] overflow-y-auto">
+<div id="page" class="px-8 py-4 bg-page rounded-tl-[2rem] lg:rounded-tl-[4rem] overflow-y-auto min-h-[calc(100vh-6rem)]">
+    <SideNavigation />
     <div class="max-w-4xl m-auto">
         <slot />
     </div>
