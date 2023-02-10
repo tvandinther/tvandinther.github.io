@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
-import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +11,4 @@ export default defineConfig({
   markdown: {
     rehypePlugins: []
   },
-  output: "server",
-  adapter: cloudflare({ mode: "directory" }),
 });
