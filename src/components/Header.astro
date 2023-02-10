@@ -2,7 +2,7 @@
 import Hamburger from "./Hamburger.astro";
 import NavigationMenu from "./NavigationMenu.astro";
 ---
-<header class="flex bg-primary w-screen p-3 h-16 sticky -top-16 [&.show]:top-0 transition-[top]">
+<header class="flex bg-primary w-screen p-3 h-16 sticky z-50 [&.hide]:-top-16 top-0 transition-[top]">
   <span class="relative bottom-2 font-display text-5xl text-page mr-8 ml-8 lg:ml-16">mioi.io</span>
   <nav class="w-full">
     <Hamburger />
@@ -14,7 +14,7 @@ import NavigationMenu from "./NavigationMenu.astro";
   const h = document.querySelector("header");
   window.addEventListener("scroll", () => {
     const c = window.pageYOffset;
-    if (window.scrollHiding.header) p > c ? h.classList.add("show") : h.classList.remove("show");
+    if (window.scrollHiding.header) p > c ? h.classList.remove("hide") : h.classList.add("hide");
     p = c;
   })})();
 </script>
