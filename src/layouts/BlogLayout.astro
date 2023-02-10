@@ -1,6 +1,6 @@
 ---
 import BlogNavigation from "@components/BlogNavigation.astro";
-import BaseLayout from "./BaseLayout.astro";
+import PageLayout from "./PageLayout.astro";
 
 type Props = {
     pageTitle: string;
@@ -8,7 +8,7 @@ type Props = {
 
 const { pageTitle } = Astro.props;
 ---
-<BaseLayout pageTitle={`mioi Blog | ${pageTitle}`}>
+<PageLayout pageTitle={`mioi Blog | ${pageTitle}`}>
     <BlogNavigation />
     <slot />
-</BaseLayout>
+</PageLayout>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120158257-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-120158257-2');
+    </script>
+    <!---->
+    <!-- Adsense --
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9722522131356198",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!---->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Egg Inc. Contract Search</title>
+    <meta name="description" content="Look up the details for your contract co-op! For the mobile game Egg Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Look up the details for your contract co-op! For the mobile game Egg Inc.">
+    <meta name="link" content="https://www.desmos.com/calculator/35ysh27tb8">
+    <meta name="theme-color" content="#e0effc">
+    <link rel="icon" sizes="192x192" href="/favicon.ico">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/siteHeader.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Passion+One" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="contractCalculator.js"></script>
+</head>
+<body>
+	<a href="https://egginc.mioi.io">
+		<div class="banner">
+			Click here to go to the new site!
+		</div>
+	</a>
+    <div id="page">
+        <div class="container">
+            <div id="pageHeader" class="main">
+                <h1>Contract Calculator</h1>
+            </div>
+            
+            <!-- 1st Box -->
+            <div class="head topCorner">
+                <h3>
+                    Contracts
+                </h3>
+            </div>
+            <div class="flex main content bottomCorner overflow">
+                <div class="col flexGrow2">
+                    <div class="box center" id="contracts">
+                        
+                    </div>
+                </div>
+            </div>
+            <!--Warning Box-->
+            <div id="warningBox" class="hide">
+                <div id="shippingRateWarning">
+                    <img src="warning.png" class="warningIcon">
+                    <h4 class="warningText">Your farm's <span>shipping capacity</span> is limiting your completion time! You need a shipping capacity of at least <span id="shippingRateWarningValue"></span> to maintain full steam.</h4>
+                </div>
+                <div id="maxPopulationWarning">
+                    <img src="warning.png" class="warningIcon">
+                    <h4 class="warningText">Your farm's <span>max hab capacity</span> is limiting your completion time! You need a max hab capacity of at least <span id="maxPopulationWarningValue"></span> to maintain full steam.</h4>
+                </div>
+            </div>
+            <!--2nd Box-->
+            <div class="head topCorner">
+                <h3>
+                    Variables
+                </h3>
+            </div>
+  
+            <div class="flex main content bottomCorner overflow">
+                <div id="stickyValue" class="col flexMax">
+                    <div class="box center small">
+                        <h5 id="variablesPrompt">
+                            Play with these variables to see completion time estimates for other values.
+                        </h5>
+                        <h4 id="time"></h4>
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Contract Target 
+                            <svg style="display: none;" class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="target" id="target" min="0" value="5.0q">
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Eggs Laid 
+                            <svg style="display: none;" class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="target" id="eggsLaid" min="0" value="0">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Farm Population 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                            <g style="line-height:125%">
+                            <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                            </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="tel" name="population" id="population" min="0" value="10,000,000">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Max Hab Capacity 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                            <g style="line-height:125%">
+                            <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                            </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="tel" name="maxPopulation" id="maxPopulation" min="0" value="1,890,000,000">
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Shipping Capacity
+                            <span class="unit">eggs / min</span> 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="shippingRate" id="shippingRate" min="0" value="5.678T">
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Egg Laying Rate 
+                            <span class="unit">eggs / min</span>
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="layingRate" id="layingRate" min="0" value="123.123B">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Int. Hatchery Rate 
+                            <span class="unit">min / hab</span>
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="tel" name="hatchRate" id="hatchRate" min="0" max="7440" value="3,000">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Internal Hatchery Calm Level 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="number" name="hatchCalm" id="hatchCalm" min="0" max="20" value="0">
+                    </div>
+                </div>
+            </div>
+            <footer class="main">
+            <h6 class="spaced">
+                Tested and accurate for version:<br>1.9
+            </h6>
+            <h4 id="copyright">
+                &copy; Created by Tom
+            </h4>
+            <a class="spaced" href="https://goo.gl/forms/rh48HWu6Eg2foInn1" target="_blank">
+                <h6>
+                    Feedback &amp; Bugs
+                </h6>
+            </a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

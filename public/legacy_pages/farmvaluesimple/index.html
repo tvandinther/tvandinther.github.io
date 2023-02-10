@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120158257-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120158257-2');
+    </script>
+    <!---->
+    <!-- Adsense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9722522131356198",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!---->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Egg Inc. Farm Value Calculator</title>
+    <meta name="description" content="An easy to use farm value calculator for the mobile game Egg Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/siteHeader.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Passion+One" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="fvcalc.js"></script>
+</head>
+<body>
+	<a href="https://egginc.mioi.io">
+		<div class="banner">
+			Click here to go to the new site!
+		</div>
+	</a>
+    <div id="page">
+        <div class="container">
+            <div id="pageHeader" class="main topCorner">
+                <h1>Simple Farm Value Calculator</h1>
+            </div>
+            <div class="main farmValue bottomCorner">
+                <h2 id="farmValue">0</h2>
+            </div>
+            <!--1st Box-->
+            <div class="head topCorner">
+                <h3>
+                    Farm
+                </h3>
+            </div>
+            <div class="flex main content bottomCorner overflow">
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Select Current Egg</h4>
+                        <select id="eggType"  onchange="calc();">
+                        
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Farm Population 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                            <g style="line-height:125%">
+                            <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                            </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="tel" name="pop" id="population" min="0" value="1">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Max Capacity 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="tel" name="maxPop" id="maxPopulation" min="250" max="1890000000" value="250">
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Egg Value 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="eggValue" id="eggValue" min="0" value="1.123B">
+                        <h5 id="error"></h5>
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Egg Laying Rate 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="symbol" type="" name="layingRate" id="layingRate" min="0" value="2.345M">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Int. Hatchery Rate 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="tel" name="hatchRate" id="hatchRate" min="0" max="7440" value="0">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Accounting Tricks Level 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="number" name="accTricks" id="accTricks" min="0" max="20" value="0">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Silos 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="number" name="silos" id="silos" min="1" max="10" value="1">
+                    </div>
+                </div>
+            </div>
+            <!--2nd Box-->
+            <div class="head topCorner">
+                <h3>
+                    Bonus
+                </h3>
+            </div>
+            <div class="flex main content bottomCorner overflow">
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Soul Eggs 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="tel" name="soulEggs" id="soulEggs" value="0">                    
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Soul Food Level 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="number" name="soulFood" id="soulFood" min="0" max="140" value="0">                    
+                    </div>
+                </div>
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Prophecy Eggs 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="number" name="prophecyEggs" id="prophecyEggs" value="0">
+                    </div>
+                </div>  
+                <div class="col">
+                    <div class="box center">
+                        <h4>Prophecy Bonus Level 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number limit" type="number" name="prophecyBonus" id="prophecyBonus" min="0" max="5" value="0">
+                    </div>
+                </div>
+                <div class="col flexGrow3">
+                    <div class="box center">
+                        <h4>Earnings Bonus 
+                            <svg class="tooltip" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="-1 -1 25 25">
+                                <g style="line-height:125%">
+                                    <path fill-rule="evenodd" d="M8.88 18.09a2.26 2.26 0 0 0 2.26 2.26c1.25 0 2.26-.96 2.26-2.22a2.26 2.26 0 0 0-2.26-2.26c-1.25 0-2.26.97-2.26 2.22zm3.94-3.3c-.44-2.12 1-3.02 2.23-4.24.42-.4.78-.84 1.1-1.3.32-.47.47-1.04.47-1.73 0-1.47-.53-2.74-1.58-3.79a5.17 5.17 0 0 0-3.79-1.58c-1.47 0-2.74.53-3.79 1.58a5.17 5.17 0 0 0-1.58 3.79h3.57c0-.5.17-.91.53-1.26.35-.35.76-.53 1.26-.53.48 0 .9.18 1.25.53.35.35.53.77.53 1.26 0 .32-.2.71-.58 1.18-.39.46-.76.86-1.11 1.2-1.35 1.36-2.1 2.4-2.1 4.59v.3h3.6zm9.68-3.54A11.25 11.25 0 0 1 11.25 22.5 11.25 11.25 0 0 1 0 11.25 11.25 11.25 0 0 1 11.25 0 11.25 11.25 0 0 1 22.5 11.25z" font-family="Lemon/Milk" font-size="500" font-weight="400" letter-spacing="0" word-spacing="0" style="-inkscape-font-specification:'Lemon/Milk'"></path>
+                                </g>
+                            </svg>
+                        </h4>
+                        <input class="number" type="tel" name="meBonus" id="meBonus" value="0"> %</input>
+                    </div>
+                </div>
+            </div>
+            <!--3rd Box-->
+            <div class="head topCorner">
+                <h3>
+                    Info
+                </h3>
+            </div>
+            <div class="flex main content bottomCorner overflow">
+                <div class="col flexGrow2">
+                    <div class="box center">
+                        <h4>Drone Rewards</h4>
+                            <p class="results">
+                                Regular Drones: <span id="smallDroneReward"></span>, <span id="mediumDroneReward"></span>, <span id="largeDroneReward"></span><br>
+                                Elite Drone: <span id="eliteDroneReward"></span><br>
+                                <br>
+                                Video Rewards: <span id="smallVideoReward"></span>, <span id="largeVideoReward"></span>
+                            </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box center">
+                        <h4>Crate Rewards</h4>
+                            <p class="results">
+                                A stack of cash: <span id="stackOfCash"></span><br>
+                                A pile of cash: <span id="pileOfCash"></span><br>
+                                A ton of cash: <span id="tonOfCash"></span><br>
+                                <br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <footer class="main">
+                <h6 class="spaced">
+                    Tested and accurate for version:<br>1.7.7
+                </h6>
+                <h4 id="copyright">
+                    &copy; Created by Tom
+                </h4>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+{
+	"orders": [{
+			"level": 1,
+			"name": "Million",
+			"symbol": "M",
+			"magnitude": 6
+		},
+		{
+			"level": 2,
+			"name": "Billion",
+			"symbol": "B",
+			"magnitude": 9
+		},
+		{
+			"level": 3,
+			"name": "Trillion",
+			"symbol": "T",
+			"magnitude": 12
+		},
+		{
+			"level": 4,
+			"name": "Quadrillion",
+			"symbol": "q",
+			"magnitude": 15
+		},
+		{
+			"level": 5,
+			"name": "Quintillion",
+			"symbol": "Q",
+			"magnitude": 18
+		},
+		{
+			"level": 6,
+			"name": "Sextillion",
+			"symbol": "s",
+			"magnitude": 21
+		},
+		{
+			"level": 7,
+			"name": "Septillion",
+			"symbol": "S",
+			"magnitude": 24
+		},
+		{
+			"level": 8,
+			"name": "Octillion",
+			"symbol": "o",
+			"magnitude": 27
+		},
+		{
+			"level": 9,
+			"name": "Nonillion",
+			"symbol": "N",
+			"magnitude": 30
+		},
+		{
+			"level": 10,
+			"name": "Decillion",
+			"symbol": "d",
+			"magnitude": 33
+		},
+		{
+			"level": 11,
+			"name": "Undecillion",
+			"symbol": "U",
+			"magnitude": 36
+		},
+		{
+			"level": 12,
+			"name": "Duodecillion",
+			"symbol": "D",
+			"magnitude": 39
+		},
+		{
+			"level": 13,
+			"name": "Tredecillion",
+			"symbol": "Td",
+			"magnitude": 42
+		},
+		{
+			"level": 14,
+			"name": "Quattordecillion",
+			"symbol": "qd",
+			"magnitude": 45
+		},
+		{
+			"level": 15,
+			"name": "Quindecillion",
+			"symbol": "Qd",
+			"magnitude": 48
+		},
+		{
+			"level": 16,
+			"name": "Sexdecillion",
+			"symbol": "sd",
+			"magnitude": 51
+		},
+		{
+			"level": 16,
+			"name": "Septendecillion",
+			"symbol": "Sd",
+			"magnitude": 54
+		}
+	],
+	"eggTypes": [{
+            "ID": 1,
+            "Name": "Edible"
+        },
+        {
+            "ID": 2,
+            "Name":	"Superfood"
+        },
+        {
+            "ID": 3,
+            "Name":	"Medical"
+        },
+        {
+            "ID": 4,
+            "Name":	"Rocket Fuel"
+        },
+        {
+            "ID": 5,
+            "Name":	"Super Material"
+        },
+        {
+            "ID": 6,
+            "Name":	"Fusion"
+        },
+        {
+            "ID": 7,
+            "Name":	"Quantum"
+        },
+        {
+            "ID": 8,
+            "Name":	"Immortality"
+        },
+        {
+            "ID": 9,
+            "Name":	"Tachyon"
+        },
+        {
+            "ID": 10,
+            "Name":	"Graviton"
+        },
+        {
+            "ID": 11,
+            "Name":	"Dilithium"
+        },
+        {
+            "ID": 12,
+            "Name":	"Prodigy"
+        },
+        {
+            "ID": 13,
+            "Name":	"Terraform"
+        },
+        {
+            "ID": 14,
+            "Name":	"Antimatter"
+        },
+		{
+            "ID": 15,
+            "Name":	"Dark Matter"
+        },
+        {
+            "ID": 16,
+            "Name":	"A.I."
+        },
+        {
+            "ID": 17,
+            "Name":	"Nebula"
+        }
+    ]
+}

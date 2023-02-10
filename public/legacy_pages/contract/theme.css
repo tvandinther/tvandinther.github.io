@@ -1,0 +1,628 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(253, 246, 238);
+    color: rgba(0, 0, 0, 0.715);
+    font-family: 'Comfortaa', cursive;
+}
+
+.container {
+    max-width: 1024px;
+    min-width: 304px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 542px) {
+    div.contract {
+        max-width: unset;
+        min-height: inherit;
+        max-height: fit-content;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+    }
+
+    .contract>img {
+        height: 100px;
+    }
+
+    .expand>.contract>img {
+        height: unset;
+    }
+
+    .flex-container {
+        flex-basis: 100%;
+        min-height: 100px;
+        height: fit-content;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container {
+    margin: 10px;
+}
+
+#pageHeader {
+    padding: 15px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#copyright {
+    grid-column: 2;
+}
+
+#warningBox {
+    max-height: max-content;
+    background-color: rgb(255, 241, 45);
+    border: 3px dashed rgba(0, 0, 0, 0.715);
+    border-radius: 10px;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+input.failure {
+    border: solid 2px rgb(212, 61, 61);
+}
+
+.hide {
+    display: none !important;
+    height: 0px !important;
+}
+
+
+div[id$="Warning"] {
+    display: none;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.warningIcon {
+    margin: auto;
+    width: 100%;
+    grid-column: 1;
+}
+
+.warningText {
+    grid-column: 2;
+    text-align: left;
+    line-height: 30px;
+}
+
+.warningText>span {
+    color: rgb(212, 61, 61);
+}
+
+.main {
+    background-color: rgb(212, 61, 61);;
+    border-radius: 10px;
+}
+
+.head {
+    background-color: rgb(133, 133, 133);
+    padding: 10px 10px 10px 30px;
+}
+
+.content {
+    padding: 20px 15px 20px 15px;
+}
+
+.box {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    min-height: 80px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.topCorner {
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.bottomCorner {
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#stickyValue {
+    position: sticky;
+    top: -1px;
+    z-index: 99;
+}
+
+.function-plot {
+    max-height: 364px;
+    width: auto;
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+    margin: 0px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 48px;
+    font-weight: normal;
+    margin: 5px;
+    color: rgb(250, 250, 250);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+h2 {
+    font-family: 'Passion One', cursive;
+    font-weight: 100;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: rgb(250, 250, 250);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.315);
+}
+
+h3 {
+    color: black;
+    text-align: left;
+    color: rgb(250, 250, 250);
+
+}
+
+h4 {
+    margin: 10px;
+    font-size: 18px;
+}
+
+h5 {
+    margin: 10px;
+}
+
+a {
+    color: #272a35;
+}
+
+span.unit {
+    font-size: 0.7em;
+}
+
+p.loading {
+    position: absolute;
+    left: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+input {
+    text-align: right;
+}
+
+input, select {
+    margin-bottom: 15px;
+    width: 80%;
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(250, 250, 250);
+}
+
+.input-tooltip {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 1;
+    width: 100%;
+    height: 100% !important;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 200%;
+    background: rgba(255, 166, 166, 0.90);
+    transition: filter 0.3s ease;
+}
+
+#contracts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.hide-fade {
+    height: 0px;
+    visibility: hidden;
+    filter: opacity(0) !important;
+}
+
+.contract {
+    background-color: rgba(236, 236, 236, 1.000);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    user-select: none;
+}
+
+.contract>img {
+    max-width: 150px;
+    transition: transform 500ms ease;
+}
+
+:not(.expand)>.contract:hover>img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.contract>div>h4 {
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+
+.contract-info {
+    overflow: hidden;
+    margin: auto 0 auto 0;
+}
+
+.contract>div>.details {
+    height: 0;
+    overflow: hidden;
+}
+
+.contract>div>.details>.coopDetails {
+    transition: all 1000ms ease;
+    filter: opacity(1);
+}
+
+.contract>div>.details>.coopDetails>.rewards {
+    display: grid;
+    grid-template-columns: [image] 50px [quantity] 80px [progress] auto;
+    grid-auto-rows: 40px;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.img {
+    grid-column: image;
+    justify-self: right;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.img>img {
+    max-height: 100%;
+    float: right;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.img>.grayed {
+    filter: grayscale(0.5);
+}
+
+.contract>div>.details>.coopDetails>.rewards>.img>.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(0.6);
+}
+
+.contract>div>.details>.coopDetails>.rewards>p {
+    grid-column: quantity;
+    justify-self: left;
+}
+
+.contract>div>.details>.coopDetails>.rewards>* {
+    width: auto;
+    margin: auto 5px auto 5px;
+    max-height: 30px;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.progress {
+    height: 50%;
+    width: 90%;
+    justify-self: center;
+    grid-column: progress;
+    position: relative;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.progress>canvas {
+    border-radius: 50px;
+    border: solid 1px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.contract>div>.details>.coopDetails>.rewards>.progress>p {
+    margin: auto;
+    line-height: 150%;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    font-size: 90%;
+    text-shadow: black 0px 1px 3px;
+    user-select: none;
+}
+
+.contract>div>.details>.coopDetails>.members {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-auto-rows: minmax(40px, auto);
+    max-height: 266px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.715);
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.contract>div>.details>.coopDetails>.members>* {
+    border: rgba(0, 0, 0, 0.15) 1px dotted;
+    height: 100%;
+    margin: unset;
+    padding: 10px;
+}
+
+.contract>div>.details>.coopDetails>.members>.table-bold {
+    font-weight: bold;
+}
+
+.flex-container.expand {
+    width: 100%;
+    order: -1 !important;
+}
+
+.expand>.contract {
+    display: grid;
+    grid-template-columns: 200px auto;
+    min-width: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    flex-basis: 100%;
+    transition: all 500ms ease;
+    transition-property: min-width, max-width;
+    user-select: unset;
+}
+
+.expand>.contract>div>.details {
+    height: auto;
+}
+
+.expand>.contract::after {
+    clear: both;
+}
+
+.expand>.contract>img {
+    max-width: 200px;
+}
+
+.expand>.contract>img:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.coopRequest {
+    display: grid;
+    /* grid-template-columns: auto 50px; */
+    height: 40px;
+    position: relative;
+}
+
+.coopRequest>input {
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    grid-column: span 2;
+}
+
+.coopRequest>a {
+    display: block;
+    background-color: rgb(200, 255, 165);
+    height: 100%;
+    width: 50px;
+    border: 1px solid rgb(169, 169, 169);
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+    position: absolute;
+}
+
+.coopRequest>a:hover {
+    background-color: rgba(129, 255, 46, 1);
+    cursor: pointer;
+}
+
+.coopRequest>a>* {
+    height: 100%;
+}
+
+.coopRequest.failure>* {
+    border: solid 2px rgb(212, 61, 61);
+}
+
+.coopRequest.failure>input {
+    border-right: none;
+}
+
+.coopRequest.failure>a {
+    border-left: none;
+}
+
+.loadIcon {
+    transition: all 500ms ease;
+    position: absolute;
+    left: 5px;
+    height: 40px;
+    border: none !important;
+}
+
+.tooltip {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.715);
+    vertical-align: middle;
+}
+
+.tooltip:hover {
+    fill: rgba(0, 0, 0, 0.715);
+    stroke: none;
+}
+
+.tooltipBox {
+    position: absolute;
+    background: none;
+    border: none !important;
+    color: none;
+    box-shadow: none;
+    padding: 0;
+    width: 300px;
+    height: auto;
+}
+
+.tooltipImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #666666;
+}
+
+.regex {
+    background: rgb(250, 250, 250);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.315);
+    font-family: 'Comfortaa', cursive;
+    font-size: 12pt;
+}
+
+/* Use 815px as mobile breakpoint */
+@media only screen and (max-width: 815px) {
+    .content {
+        padding: unset;
+    }
+    .expand>.contract {
+        grid-template-columns: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+    .expand>.contract>img {
+        width: 24.5vw;
+        justify-self: center;
+    }
+    .contract>div>.details>.coopDetails>.rewards {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "image quantity"              "progress progress";
+    }
+    .contract>div>.details>.coopDetails>.rewards>.progress {
+        grid-column-start: span 2;
+    }
+}
+
+@media only screen and (max-width: 387px) {
+    .col {
+        min-width: 274px !important;
+    }
+}
+
+.col {
+    min-width: 331px;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.shadow {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.overflow {
+    overflow: auto
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.small {
+    min-height: unset;
+}
+
+.flexGrow2 {
+    flex-grow: 2;
+}
+
+.flexGrow3 {
+    flex-grow: 3;
+}
+
+.flexMax {
+    flex-basis: 100%;
+}
+
+p.results>span {
+    font-weight: bold;
+}
+
+.spaced {
+    margin: auto;
+}
+
+.animate-fadein {
+    animation-name: fadein;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+.animate-fadeout {
+    animation-name: fadeout;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
