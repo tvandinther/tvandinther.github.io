@@ -12,7 +12,7 @@ const username = "tvandinther";
     const h = document.querySelector("footer");
     window.addEventListener("scroll", () => {
       const c = window.pageYOffset;
-      p < c ? h.classList.add("hide") : h.classList.remove("hide");
+      if (window.scrollHiding.footer) p < c ? h.classList.add("hide") : h.classList.remove("hide");
       p = c;
     })})();
 </script>

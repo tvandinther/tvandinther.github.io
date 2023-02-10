@@ -14,7 +14,7 @@ import NavigationMenu from "./NavigationMenu.astro";
   const h = document.querySelector("header");
   window.addEventListener("scroll", () => {
     const c = window.pageYOffset;
-    p > c ? h.classList.add("show") : h.classList.remove("show");
+    if (window.scrollHiding.header) p > c ? h.classList.add("show") : h.classList.remove("show");
     p = c;
   })})();
 </script>

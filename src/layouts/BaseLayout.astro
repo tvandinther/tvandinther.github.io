@@ -16,7 +16,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 </head>
-<body class="bg-primary">
+<body class="bg-primary overflow-x-clip">
 <Header />
 <div id="page" class="px-8 py-4 bg-page rounded-tl-[2rem] lg:rounded-tl-[4rem] overflow-y-auto min-h-[calc(100vh-6rem)]">
     <SideNavigation />
@@ -26,4 +26,8 @@ const { pageTitle } = Astro.props;
 </div>
 <Footer />
 </body>
+<script>
+    // @ts-ignore
+    window.scrollHiding = {header: true, footer: true};
+</script>
 </html>
