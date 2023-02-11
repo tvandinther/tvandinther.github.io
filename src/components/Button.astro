@@ -1,0 +1,9 @@
+---
+type Props = {
+    link: string,
+    class?: string,
+}
+
+const { link, class:classes } = Astro.props;
+---
+<a href={link} class={`inline-block bg-secondary text-white m-2 p-2 text-xl shadow-sm hover:shadow-md rounded-md hover:bg-tertiary cursor-pointer ${classes}`}><slot /></a>
