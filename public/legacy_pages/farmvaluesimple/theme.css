@@ -2,6 +2,18 @@ body {
     background-color: rgb(253, 246, 238);
     color: rgba(0, 0, 0, 0.715);
     font-family: 'Comfortaa', cursive;
+    margin: 0;
+}
+
+.banner {
+    background-color: #3f51b5;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+
+#page {
+    margin: 8px;
 }
 
 .container {
