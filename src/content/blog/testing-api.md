@@ -8,10 +8,9 @@ author: "Tom van Dinther"
 image:
     url: "images/testing-api.png"
     alt: "Testing Web APIs"
-#prism_lineno: false
 tags: ["testing", "API"]
 categories: ["testing"]
-#comments: true
+featured: true
 ---
 Testing a web API can appear to be quite different from testing a console application. While many of the same core elements exist in a web API, they also take on a new disguise. We will go over the high level structure of a web API and what some of the testing boundaries might be, and when you might want to test at each boundary.
 
