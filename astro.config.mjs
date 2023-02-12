@@ -8,7 +8,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: "https://blog.mioi.io",
-  integrations: [tailwind(), sitemap(), prefetch(), partytown()],
+  integrations: [tailwind(), sitemap(), prefetch(), partytown({ config: { forward: ["dataLayer.push"] } })],
   markdown: {
     rehypePlugins: []
   }
