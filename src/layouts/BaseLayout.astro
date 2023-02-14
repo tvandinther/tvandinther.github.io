@@ -2,6 +2,11 @@
 import Header from '@components/Header.astro';
 // import Footer from '@components/Footer.astro';
 import SideNavigation from "@components/SideNavigation.astro";
+
+type Props = {
+    pageTitle: string;
+}
+
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">

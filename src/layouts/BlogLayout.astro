@@ -8,7 +8,7 @@ type Props = {
 
 const { pageTitle } = Astro.props;
 ---
-<PageLayout pageTitle={`mioi Blog | ${pageTitle}`}>
+<PageLayout pageTitle={`${pageTitle} — mioi Blog`}>
     <BlogNavigation />
     <slot />
 </PageLayout>

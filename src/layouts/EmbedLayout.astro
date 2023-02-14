@@ -3,10 +3,11 @@ import BaseLayout from "./BaseLayout.astro";
 
 type Props = {
     link: string;
+    pageTitle: string;
 }
 
-const { link } = Astro.props;
+const { link, pageTitle } = Astro.props;
 ---
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
     <iframe id="embed" src={link} class="w-full h-full" onload="this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px';"/>
 </BaseLayout>

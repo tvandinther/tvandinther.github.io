@@ -3,11 +3,11 @@ import Button from "@components/Button.astro";
 import PageTitle from "@components/PageTitle.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
-<PageLayout>
+<PageLayout pageTitle="Egg Inc. Farm Value Calculator (v2)">
     <PageTitle>Egg Inc. Farm Value Calculator (v2)</PageTitle>
     <img src="/assets/images/farmvalueScreenshot_large.png" class="m-auto w-full h-auto shadow-sm border-2 rounded border-gray-300">
     <div class="flex">
-        <Button link="/legacy/farmvaluesimple">Go to page</Button>
+        <Button link="/legacy/farmvalue">Go to page</Button>
     </div>
     <p class="mt-2">
         After making the contract calculator, I wanted to revisit the first version of the farm value calculator. The problem was that the original calculator required pure numeric inputs, some of which were hidden away in the game menus. For the new calculator I wanted to provide a more interactive user interface with images from the game so that users could recreate their farm on the page and have the calculator do the math for them. This meant that users could easily perform "what-if" scenarios to see how their farm would change if they made a certain upgrade or bought a new building.
