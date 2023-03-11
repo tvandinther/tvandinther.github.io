@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import PageTitle from "@components/PageTitle.astro";
+import Button from "@components/Button.astro";
+
+export async function getStaticPaths() {
+    const allProjects = await getCollection("projects");
+    return allProjects.map((project) => ({
+        params: { slug: project.slug }, props: { project }
+    }));
+}
+
+type Props = {
+    project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+<PageLayout pageTitle="Egg Inc. Companion App">
+    <PageTitle>{project.data.title}</PageTitle>
+    {project.data.headerImage && <img src={project.data.headerImage} class="m-auto w-full h-auto shadow-sm border-2 rounded border-gray-300">}
+    <div class="flex mb-2">
+        {project.data.url && <Button link={project.data.url}>Go to site</Button>}
+        {project.data.sourceCodeUrl && <Button link={project.data.sourceCodeUrl}>Source code</Button>}
+    </div>
+    <Content />
+</PageLayout>
