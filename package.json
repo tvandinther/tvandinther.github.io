@@ -20,7 +20,7 @@
   },
   "engines": {
     "yarn": ">=1.22.0",
-    "node": "16.19.0"
+    "node": "16.19.x"
   },
   "devDependencies": {
     "@jsdevtools/rehype-inline-svg": "^1.1.4",
