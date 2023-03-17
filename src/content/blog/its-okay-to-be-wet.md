@@ -9,7 +9,7 @@ tags: ["hot take"]
 categories: ["discussion"]
 featured: true
 ---
-You will have probably heard of the idea of **D**on’t **R**epeat **Y**ourself (DRY). It’s often over-emphasised as a golden rule of software development — that duplicated code should be avoided. This type of refactoring is not free, and before you pay the price, consider if the cost is a reasonable expense. What if there is value in repeating yourself and **W**rite **E**verything **T**wice (WET)?
+You will have probably heard of the idea of **D**on’t **R**epeat **Y**ourself (DRY). It’s often over-emphasised as a golden rule of software development — that duplicated code should be avoided. This type of refactoring isn't free, so consider whether the cost is worth the potential benefits. What if there is value in repeating yourself and **W**rite **E**verything **T**wice (WET)?
 
 > The price of the DRY refactor is *coupling*.
 > 
@@ -31,5 +31,7 @@ It is easy to look at a piece of code, see a common group of tokens across sever
 When the cost of abstraction outweighs the value it provides.
 
 A poor abstraction will run you in the negatives; a good abstraction takes work. Evaluating this can be difficult, but as the size of the extraction increases, so does its impact, and the amount of consideration it requires should grow with it. Extracting a duplicated statement or expression into a local function can be done almost subconsciously. Creating a new microservice, on the other hand, requires careful consideration.
+
+The choice between adhering to the DRY principle and allowing some repetition in code is not always straightforward. While the DRY principle can lead to cleaner, more maintainable code, it can also introduce coupling and increase the cost of change. On the other hand, embracing the WET approach can sometimes provide benefits when the cost of abstraction outweighs its value, or when seemingly similar code represents different ideas that may diverge in the future. As software developers, it's essential to carefully consider the trade-offs between these two principles and make informed decisions based on the specific context of each situation. Remember, the key is finding the right balance between abstraction and repetition to maximize your code's efficiency, maintainability, and adaptability.
 
 So the next time you’re about to extract repetition, consider the implications. You may be better off without it.
