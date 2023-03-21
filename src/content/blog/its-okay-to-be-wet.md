@@ -1,11 +1,11 @@
 ---
 title: "It's Okay To Be WET"
-description: "A critical look at the popular principle of \"Don't Repeat Yourself\" (DRY)"
+description: "A critical look at the popular principle of \"Don't Repeat Yourself\" (DRY), and a brief detour about abstractions."
 date: 2023-03-21T22:50:00+12:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 draft: true
 author: "Tom van Dinther"
-tags: ["refactoring", "hot take"]
+tags: ["refactoring", "abstraction", "hot take"]
 categories: ["discussion"]
 featured: true
 ---
