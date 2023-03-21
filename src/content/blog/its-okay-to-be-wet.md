@@ -109,7 +109,7 @@ double AverageTestScore(List<double> testScores, List<double> weights) {
     return weightedSum / weights.Sum();
 }
 ```
-Although the example is trivial for illustrative purposes, consider the case of a more complex idea. At the outset, we mistakenly assumed that the two functions represented the same idea. However, the new requirement revealed that they represented different ideas, and the WET approach allowed us to make the change without introducing complexity to the Average function. Had we introduced the coupling of the DRY approach, we would have been required to make more complicated changes and manipulate the abstraction to fit the new requirement.
+Although the example is trivial for illustrative purposes, consider the case of a more complex idea. At the outset, we mistakenly assumed that the two functions represented the same idea. However, the new requirement revealed that they represented different ideas, and the WET approach allowed us to make the change without introducing complexity to the `Average` function. Had we introduced the coupling of the DRY approach, we would have been required to make more complicated changes and manipulate the abstraction to fit the new requirement.
 
 ## When is it okay to be WET?
 
