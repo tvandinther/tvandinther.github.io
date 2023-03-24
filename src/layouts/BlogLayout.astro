@@ -4,12 +4,18 @@ import PageLayout from "./PageLayout.astro";
 
 type Props = {
     pageTitle: string;
+    heroImage?: string | undefined;
 }
 
-const { pageTitle } = Astro.props;
+const { pageTitle, heroImage } = Astro.props;
 ---
 <PageLayout pageTitle={`${pageTitle} — mioi Blog`}>
     <slot name="head" slot="head" />
-    <BlogNavigation />
+    <div class="relative">
+        {heroImage && <img src={heroImage} class="relative -mt-4" /> }
+        <div class="absolute bottom-0 left-0 right-0 p-1 bg-gray-200 bg-opacity-75">
+            <BlogNavigation />
+        </div>
+    </div>
     <slot />
 </PageLayout>

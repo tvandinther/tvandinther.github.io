@@ -3,11 +3,11 @@ title: "Testing Web APIs"
 description: "What are the basic areas at which to test an API? A high-level overview for testing web APIs"
 date: 2022-08-01T16:20:23+12:00
 lastUpdated: 2023-02-08T00:03:00+13:00
+image:
+  url: "/assets/images/blog/testing-api_banner.png"
+  alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
-image:
-    url: "images/testing-api.png"
-    alt: "Testing Web APIs"
 tags: ["testing", "API"]
 categories: ["testing"]
 featured: true

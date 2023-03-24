@@ -3,6 +3,9 @@ title: "It's Okay To Be WET"
 description: "A critical look at the popular principle of \"Don't Repeat Yourself\" (DRY), and a brief detour about abstractions."
 date: 2023-03-21T22:50:00+12:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
+image:
+  url: "/assets/images/blog/its-okay-to-be-wet_banner.png"
+  alt: "Blog post banner image"
 draft: true
 author: "Tom van Dinther"
 tags: ["refactoring", "abstraction", "hot take"]
