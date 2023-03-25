@@ -30,5 +30,7 @@ const { Content } = await project.render();
         {project.data.url && <Button link={project.data.url}>Go to site</Button>}
         {project.data.sourceCodeUrl && <Button link={project.data.sourceCodeUrl}>Source code</Button>}
     </div>
-    <Content />
+    <div class="prose-lg lg:prose-2xl prose-stone">
+        <Content />
+    </div>    
 </PageLayout>
