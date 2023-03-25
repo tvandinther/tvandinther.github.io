@@ -32,11 +32,11 @@ const { pageTitle } = Astro.props;
     </script>
     <title>{pageTitle}</title>
 </head>
-<body class="bg-primary overflow-x-clip">
-<Header />
-<SideNavigation />
+<body class="bg-page overflow-x-clip">
+    <Header />
+    <SideNavigation />
     <slot />
-<!-- <Footer /> -->
+    <!-- <Footer /> -->
 </body>
 <script>
     // @ts-ignore

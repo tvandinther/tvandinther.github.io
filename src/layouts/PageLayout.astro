@@ -3,13 +3,20 @@ import BaseLayout from './BaseLayout.astro';
 
 type Props = {
     pageTitle: string;
+    bannerImage?: string;
 };
 
-const { pageTitle } = Astro.props;
+const { pageTitle, bannerImage } = Astro.props;
 ---
 <BaseLayout pageTitle={pageTitle}>
     <slot name="head" slot="head" />
-    <div id="page" class="px-8 py-4 bg-page rounded-tl-[2rem] lg:rounded-tl-[4rem] overflow-y-auto min-h-[calc(100vh-6rem)]">
+    <div class="relative flex justify-center w-full overflow-x-clip">
+        {bannerImage && <img src={bannerImage} class="relative mx-8 max-w-4xl" /> }
+        <div class="absolute bottom-0 max-w-4xl p-1 bg-white w-full bg-opacity-40 backdrop-blur border-t border-opacity-50 border-white">
+            <slot name="sub-navigation" />
+        </div>
+    </div>
+    <div id="page" class="px-8 py-4 overflow-y-auto min-h-[calc(100vh-6rem)]">
         <div class="max-w-4xl m-auto">
             <slot />
         </div>

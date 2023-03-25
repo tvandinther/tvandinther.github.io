@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+    project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const banner = project.data.banner ?? project.data.image;
+---
+<a href={`/projects/${project.slug}`}>
+    <div class="m-2 shadow-md hover:shadow-lg cursor-pointer overflow-x-clip">
+        {banner && <div style={`background-image: url(${banner});`} class="bg-cover bg-[center_top] h-48 rounded-t-md min-h-[6rem]" />}
+        <div class="py-2 px-4">
+            <h2 class="text-2xl my-2">{project.data.title}</h2>
+            <p class="my-2">
+                {project.data.description}
+            </p>
+        </div>
+    </div>
+</a>

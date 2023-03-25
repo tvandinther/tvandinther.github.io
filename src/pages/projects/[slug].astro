@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import PageTitle from "@components/PageTitle.astro";
 import Button from "@components/Button.astro";
+import ProjectsNavigation from "@components/ProjectsNavigation.astro";
 
 export async function getStaticPaths() {
     const allProjects = await getCollection("projects");
@@ -19,12 +20,17 @@ type Props = {
 const { project } = Astro.props;
 const { Content } = await project.render();
 ---
-<PageLayout pageTitle="Egg Inc. Companion App">
+<PageLayout pageTitle="Egg Inc. Companion App" bannerImage={project.data.banner ?? "/assets/images/projects_banner.png"}>
+    <Fragment slot="sub-navigation">
+        <ProjectsNavigation />
+    </Fragment>
     <PageTitle>{project.data.title}</PageTitle>
-    {project.data.headerImage && <img src={project.data.headerImage} class="m-auto w-full h-auto shadow-sm border-2 rounded border-gray-300">}
+    {project.data.image && <img src={project.data.image} class="m-auto w-full h-auto shadow-sm border-2 rounded border-gray-300">}
     <div class="flex mb-2">
         {project.data.url && <Button link={project.data.url}>Go to site</Button>}
         {project.data.sourceCodeUrl && <Button link={project.data.sourceCodeUrl}>Source code</Button>}
     </div>
-    <Content />
+    <div class="prose-lg lg:prose-2xl prose-stone">
+        <Content />
+    </div>    
 </PageLayout>

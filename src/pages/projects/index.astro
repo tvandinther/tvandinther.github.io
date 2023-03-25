@@ -1,20 +1,20 @@
 ---
-import Card from "@components/Card.astro";
+import PageTitle from "@components/PageTitle.astro";
+import ProjectItem from "@components/ProjectItem.astro";
+import ProjectsNavigation from "@components/ProjectsNavigation.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const allProjects = await getCollection("projects");
 ---
-<PageLayout pageTitle="Projects — mioi">
-    <h1 class="text-3xl">Projects</h1>
+<PageLayout pageTitle="Projects — mioi" bannerImage="/assets/images/projects_banner.png">
+    <Fragment slot="sub-navigation">
+        <ProjectsNavigation />
+    </Fragment>
+    <PageTitle>Projects</PageTitle>
     <div class="flex flex-col">
         {allProjects.sort((a, b) => a.data.date < b.data.date ? 1 : -1).map(project =>
-        <Card title={project.data.title} link={`/projects/${project.slug}`}>
-            <img src={project.data.headerImage} class="m-auto w-full h-auto max-w-[800px]">
-            <p class="my-2">
-                {project.data.description}
-            </p>
-        </Card>
+        <ProjectItem project={project} />
         )}
     </div>
 </PageLayout>

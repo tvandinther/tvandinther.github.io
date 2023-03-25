@@ -4,12 +4,15 @@ import PageLayout from "./PageLayout.astro";
 
 type Props = {
     pageTitle: string;
+    bannerImage?: string | undefined;
 }
 
-const { pageTitle } = Astro.props;
+const { pageTitle, bannerImage = "/assets/images/blog_banner.png" } = Astro.props;
 ---
-<PageLayout pageTitle={`${pageTitle} — mioi Blog`}>
+<PageLayout pageTitle={`${pageTitle} — mioi Blog`} bannerImage={bannerImage}>
     <slot name="head" slot="head" />
-    <BlogNavigation />
+    <Fragment slot="sub-navigation">
+        <BlogNavigation />
+    </Fragment>
     <slot />
 </PageLayout>

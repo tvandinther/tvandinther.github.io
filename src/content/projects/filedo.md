@@ -2,6 +2,7 @@
 title: filedo
 description: A command-line utility to perform actions on targeted files.
 date: 2022-10-01T12:00:00+12:00
+banner: /assets/images/projects/filedo_banner.png
 sourceCodeUrl: https://github.com/tvandinther/filedo
 ---
 The initial goal was to write a command-line utility that aided the deployment of various IaC organised in a particular file structure. As I designed the solution, it became clear that a general approach to running commands against globs of files using a recursive structure would be extremely beneficial to more than just deploying IaC.

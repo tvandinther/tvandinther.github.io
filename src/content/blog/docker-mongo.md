@@ -2,15 +2,14 @@
 title: "Creating a MongoDB instance with a web interface in Docker"
 description: "How to create a MongoDB instance with a web interface in Docker"
 date: 2021-09-02T12:59:47+12:00
+image:
+  url: "/assets/images/blog/docker-mongo_banner.png"
+  alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
-prism_lineno: false
 tags: ["docker", "mongoDB"]
 categories: ["containerisation"]
 series: ["Taming Docker"]
-comments: true
-bookcase_cover_src: "posts/docker-mongo.png"
-bookcase_cover_src_dark: "posts/docker-mongo.png"
 ---
 When building a full-stack application with MongoDB as your database, it can often be difficult to start out. Installing all of the right pieces on your machine for the first time can be difficult and perhaps a Google search for this is the very thing that brought you here. You may also be somewhat familiar with Docker, and so you'd like to try build your full-stack along with Docker to ease your development experience. Because Docker is such a wonderful tool, it can make our task easy and automated. Everything we are going to set up here can be pushed to your project's remote git repository and be brought to life on another computer with a single command. Now that's a great developer experience.
 
