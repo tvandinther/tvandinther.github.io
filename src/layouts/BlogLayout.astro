@@ -7,7 +7,7 @@ type Props = {
     bannerImage?: string | undefined;
 }
 
-const { pageTitle, bannerImage = "" } = Astro.props;
+const { pageTitle, bannerImage = "/assets/images/blog_banner.png" } = Astro.props;
 ---
 <PageLayout pageTitle={`${pageTitle} — mioi Blog`} bannerImage={bannerImage}>
     <slot name="head" slot="head" />
