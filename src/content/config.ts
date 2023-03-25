@@ -23,7 +23,8 @@ const projectCollection = defineCollection({
         title: z.string(),
         description: z.string(),
         date: z.date(),
-        headerImage: z.string().optional(),
+        image: z.string().optional(),
+        banner: z.string().optional(),
         url: z.string().optional(),
         sourceCodeUrl: z.string().optional(),
     })
