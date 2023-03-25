@@ -1,9 +1,20 @@
 ---
+import { mergeClasses } from '@helpers/utility';
+
 type Props = {
     link: string,
-    class?: string,
+    inverted?: boolean,
+    underline?: boolean,
+    classes?: string,
 }
 
-const { link, class:classes } = Astro.props;
+const { link, classes, inverted = false } = Astro.props;
+const colouring = inverted ? "bg-primary hover:bg-page text-page hover:text-black" : "bg-page outline-primary outline outline-1 hover:bg-primary text-black hover:text-page"
 ---
-<a href={link} class={`inline-block bg-secondary text-white m-2 p-2 text-xl shadow-sm hover:shadow-md rounded-md hover:bg-tertiary cursor-pointer ${classes}`}><slot /></a>
+<a 
+    class={mergeClasses("inline-block m-1 py-1 px-2 text-lg rounded-sm transition-all h-9", colouring, classes ?? "")}
+    href={link}
+    rel="prefetch"
+>
+    <slot />
+</a>

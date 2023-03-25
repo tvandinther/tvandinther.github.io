@@ -1,8 +1,8 @@
 ---
-import NavigationLink from '../components/NavigationLink.astro'
+import Button from './Button.astro';
 ---
 <div class="flex">
-    <NavigationLink path="/blog" title="Blog Home" inverted />
-    <NavigationLink path="/blog/posts" title="All Posts" inverted />
-    <NavigationLink path="/blog/tags" title="Tags" inverted />
+    <Button link="/blog">Blog Home</Button>
+    <Button link="/blog/posts">All Posts</Button>
+    <Button link="/blog/tags">Tags</Button>
 </div>
