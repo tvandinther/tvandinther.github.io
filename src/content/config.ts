@@ -27,6 +27,7 @@ const projectCollection = defineCollection({
         banner: z.string().optional(),
         url: z.string().optional(),
         sourceCodeUrl: z.string().optional(),
+        featured: z.boolean().optional(),
     })
 })
 
