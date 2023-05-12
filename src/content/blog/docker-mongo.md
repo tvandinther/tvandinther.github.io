@@ -7,8 +7,8 @@ image:
   alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
-tags: ["docker", "mongoDB"]
-categories: ["containerisation"]
+tags: ["Docker", "MongoDB"]
+categories: ["Containerisation"]
 series: ["Taming Docker"]
 ---
 When building a full-stack application with MongoDB as your database, it can often be difficult to start out. Installing all of the right pieces on your machine for the first time can be difficult and perhaps a Google search for this is the very thing that brought you here. You may also be somewhat familiar with Docker, and so you'd like to try build your full-stack along with Docker to ease your development experience. Because Docker is such a wonderful tool, it can make our task easy and automated. Everything we are going to set up here can be pushed to your project's remote git repository and be brought to life on another computer with a single command. Now that's a great developer experience.
