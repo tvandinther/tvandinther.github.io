@@ -44,21 +44,20 @@ I think back to a decision I made early on in the development of the proxy API. 
 
 Following this incident it became clear that a separate API would be beneficial for the continued support of community projects in a safe manner. I reached out to the developer to ask about improved communication and collaboration with third party developers.
 
-```
-From: Tom
-To: Auxbrain Inc.
+> From: Tom
+> 
+> To: Auxbrain Inc.
+> 
+> I am Tom who runs the community website at egginc.mioi.io. For the past 2 years, as you may already know, some other community members and I have been making use of the protobuf communications with the Egg, Inc. servers to build our tools. Recently I have noticed that the access to these tools has changed, specifically for my website at mioi.io. I worry that the usage of these protobuf communications has caused issues to prompt the changes.
+> 
+> I would like to open a dialogue about how bots and community websites such as egginc.mioi.io can exist alongside the game. It would be great if third party creators had a reliable and safe means to provide tools and content for the community. I look forward to your response.
 
-I am Tom who runs the community website at egginc.mioi.io. For the past 2 years, as you may already know, some other community members and I have been making use of the protobuf communications with the Egg, Inc. servers to build our tools. Recently I have noticed that the access to these tools has changed, specifically for my website at mioi.io. I worry that the usage of these protobuf communications has caused issues to prompt the changes.
+> From: Auxbrain Inc.
+>
+> To: Tom
+>
+> Unfortunately, the mioi bot caused tremendous data loss and backup confusion and will not be supported.
 
-I would like to open a dialogue about how bots and community websites such as egginc.mioi.io can exist alongside the game. It would be great if third party creators had a reliable and safe means to provide tools and content for the community. I look forward to your response.
-
----
-
-From: Auxbrain Inc.
-To: Tom
-​
-Unfortunately, the mioi bot caused tremendous data loss and backup confusion and will not be supported.
-```
 A disappointing response, and the end of an era. Not wishing to circumvent the blocks placed on my proxy API, this meant that the dashboard feature would stay disabled indefinitely. Future planned features for the companion app leaned on this access, so it made sense to cease support for the application.
 
 ## The Lessons
