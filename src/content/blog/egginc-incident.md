@@ -8,7 +8,7 @@ image:
   alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
-tags: ["Egg, Inc.", "incident"]
+tags: ["Egg, Inc.", "Incident"]
 categories: ["Cautionary Tale"]
 featured: true
 ---
