@@ -11,16 +11,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.0.3",
-    "@astrojs/prefetch": "^0.1.2",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "astro": "^2.0.7",
+    "@astrojs/partytown": "^2.0.0",
+    "@astrojs/prefetch": "^0.4.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.0.1",
     "tailwindcss": "^3.0.24"
   },
   "engines": {
     "yarn": ">=1.22.0",
-    "node": "16.19.x"
+    "node": "18.14.1"
   },
   "devDependencies": {
     "@jsdevtools/rehype-inline-svg": "^1.1.4",
