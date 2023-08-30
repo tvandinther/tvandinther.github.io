@@ -35,8 +35,8 @@ const { pageTitle } = Astro.props;
     <ViewTransitions />
 </head>
 <body class="bg-page overflow-x-clip">
-    <Header />
-    <SideNavigation />
+    <Header transition:persist />
+    <SideNavigation transition:persist />
     <slot />
     <!-- <Footer /> -->
 </body>
