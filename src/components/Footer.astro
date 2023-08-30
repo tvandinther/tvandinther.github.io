@@ -8,10 +8,10 @@ const username = "tvandinther";
     </div>
 </footer>
 <script is:inline>
-    (function() {var p = window.pageYOffset;
+    (function() {var p = window.scrollY;
     const h = document.querySelector("footer");
     window.addEventListener("scroll", () => {
-      const c = window.pageYOffset;
+      const c = window.scrollY;
       if (window.scrollHiding.footer) p < c ? h.classList.add("hide") : h.classList.remove("hide");
       p = c;
     })})();

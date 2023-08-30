@@ -10,10 +10,10 @@ import NavigationMenu from "./NavigationMenu.astro";
   </nav>
 </header>
 <script is:inline>
-  (function() {var p = window.pageYOffset;
+  (function() {var p = window.scrollY;
   const h = document.querySelector("header");
   window.addEventListener("scroll", () => {
-    const c = window.pageYOffset;
+    const c = window.scrollY;
     if (window.scrollHiding.header) p > c ? h.classList.remove("hide") : h.classList.add("hide");
     p = c;
   })})();
