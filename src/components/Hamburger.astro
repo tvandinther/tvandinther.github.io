@@ -18,5 +18,9 @@
             document.body.classList.toggle('overflow-hidden');
             o = !o;
         })
+
+        document.addEventListener('astro:after-swap', function() {
+            document.getElementById('hamburger')?.classList.remove('open');
+        })
     })();
 </script>
