@@ -6,15 +6,17 @@ type Props = {
     inverted?: boolean,
     underline?: boolean,
     classes?: string,
+    external?: boolean,
 }
 
-const { link, classes, inverted = false } = Astro.props;
+const { link, classes, inverted = false, external = false } = Astro.props;
 const colouring = inverted ? "bg-primary hover:bg-page text-page hover:text-black" : "bg-page outline-primary outline outline-1 hover:bg-primary text-black hover:text-page"
 ---
 <a 
     class={mergeClasses("inline-block m-1 py-1 px-2 text-lg rounded-sm transition-all h-9", colouring, classes ?? "")}
     href={link}
     rel="prefetch"
+    target={external ? "_blank" : "_self"}
 >
     <slot />
 </a>
