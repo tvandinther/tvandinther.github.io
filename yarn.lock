@@ -1006,10 +1006,10 @@ array.prototype.reduce@^1.0.5:
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.7"
 
-astro@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-3.0.2.tgz#853f65def9a283bcef46bca8139c6981b255c53e"
-  integrity sha512-7ytwERK1CN7LBA/BgUrA9/ktbn0WDRwvkpxZZkIPlbjp3Ojlp6e12L2ZkNIYyIsGzFqXAZZz58pFwy7KG2Qz5g==
+astro@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-3.0.6.tgz#3ae15bdf2fd3285b0189a5ab10bd5ed33ecc0e00"
+  integrity sha512-I4W71g/IzRp1dYHKbQGKp44TSlR+vO3z1c2TscMMJPCyQ3b15o0DVLWibd4zdDDeAQ1JqM8jvQy+nOYMIlacpg==
   dependencies:
     "@astrojs/compiler" "^2.0.1"
     "@astrojs/internal-helpers" "0.2.0"

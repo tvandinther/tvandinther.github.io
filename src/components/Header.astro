@@ -2,7 +2,7 @@
 import Hamburger from "./Hamburger.astro";
 import NavigationMenu from "./NavigationMenu.astro";
 ---
-<header transition:persist class="flex bg-primary w-screen p-3 h-16 sticky z-50 [&.hide]:-top-16 top-0 transition-[top]">
+<header transition:persist="header" class="flex bg-primary w-screen p-3 h-16 sticky z-50 [&.hide]:-top-16 top-0 transition-[top]">
   <a href="/"><span class="relative bottom-2 font-display text-5xl text-page mr-8 ml-8 lg:ml-16">mioi.io</span></a>
   <nav class="w-full">
     <Hamburger />
