@@ -6,11 +6,9 @@ date: 2023-09-05T09:56:00+2:00
 image:
   url: "/assets/images/blog/10-reasons-medium_banner.png"
   alt: "Blog post banner image"
-draft: true
 author: "Tom van Dinther"
 tags: ["Hot Take"]
 categories: ["Discussion"]
-featured: true
 ---
 Medium is a platform for self-publishing articles online and here are 10 reasons why I exclude it from my search results when looking for technical articles.
 
