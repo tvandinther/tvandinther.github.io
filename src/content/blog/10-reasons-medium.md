@@ -1,6 +1,6 @@
 ---
-title: "10 reasons Medium is a bad platform for technical articles"
-description: "Sign up to mioi.io premium to read this description."
+title: "10 reasons why Medium is a bad platform for technical articles"
+description: "Discover why I exclude Medium.com from my search results when looking for technical articles."
 date: 2023-09-05T09:56:00+2:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 image:
@@ -21,7 +21,7 @@ Technical information should not be a popularity contest. An article's like coun
 You now have a tool to convert engagement into money. If becoming a popular writer on the platform wasn't enough of an incentive to drive engagement, this turns the dial up.
 
 ## 3. There are no ads
-This aspect of medium appears like it should be a good thing, but there are a few reasons why this is not the
+This aspect of Medium appears like it should be a good thing, but there are a few reasons why this is not the
 <div class="-mt-32 relative z-10">
   <div class="w-full h-[86px] bg-gradient-to-t from-page to-transparent"></div>
   <div class="w-full h-64 bg-page px-[8vw] text-3xl text-center">
