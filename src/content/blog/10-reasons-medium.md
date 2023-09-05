@@ -24,7 +24,7 @@ You now have a tool to convert engagement into money. If becoming a popular writ
 This aspect of medium appears like it should be a good thing, but there are a few reasons why this is not the...
 <div class="-mt-28 relative z-10">
   <div class="w-full h-[86px] bg-gradient-to-t from-page to-transparent"></div>
-  <div class="w-full h-64 bg-page px-12 text-3xl text-center">
+  <div class="w-full h-64 bg-page px-[8vw] text-3xl text-center">
     Upgrade to mioi.io Blog Premium™ to continue reading this article
   </div>
 </div>
