@@ -1,6 +1,6 @@
 ---
-title: "10 reasons why Medium is a bad platform for technical articles"
-description: "Discover why I exclude Medium.com from my search results when looking for technical articles."
+title: "10 reasons why I exclude Medium from my search results when looking for technical articles"
+description: "Discover why I think Medium.com is a bad platform for publishing technical articles."
 date: 2023-09-05T09:56:00+2:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 image:
@@ -10,18 +10,20 @@ author: "Tom van Dinther"
 tags: ["Hot Take"]
 categories: ["Discussion"]
 ---
-Medium is a platform for self-publishing articles online and here are 10 reasons why I exclude it from my search results when looking for technical articles.
+Medium is a widely-used platform for self-publishing articles online, attracting writers and readers from various fields including technology, wellness, and more. Initially appreciated for its clean look and community of professionals, it has become a hotspot for sharing knowledge and insights. However, when it comes to sourcing reliable technical content, I find that it falls short in several ways. In this article, I will outline 10 reasons why I exclude Medium from my search results when looking for technical articles.
 
 ## 1. It has a ~~like~~ clap button
-Technical information should not be a popularity contest. An article's like count does not correlate with its value and correctness. Woefully, it can only tell you whether an article is *popular*. Without a dislike button as an outlet for dissent, there is no value to a like button other than to measure engagement.
+In the world of technical discourse, accuracy and depth should trump popularity. Yet, Medium's clap button encourages a type of popularity contest that can often overshadow quality and correctness. Unfortunately, this button serves merely as a barometer for an article's popularity, not its value.
 
-Engagement is not a measure of quality; in fact it encourages the opposite. A writer on the platform is incentivised to participate in popularism to increase their engagement. This issue is exacerbated by the next point.
+The absence of a dislike button further compounds this issue, removing an essential channel for dissent and balanced feedback. This single-sided engagement metric can inadvertently foster a culture where writers chase popularity over substance, diluting the overall quality of technical content available on the platform. This worrying trend is further amplified when we consider the next point.
 
 ## 2. It has a partner program
-Medium can pay writers for reads and interactions which means you now have a tool to convert engagement into money. If becoming a popular writer on the platform wasn't enough of an incentive to drive engagement, this turns the dial up.
+Medium's partner program stands as a central pillar in encouraging writers to contribute to the platform. At first glance, it appears as a positive initiative, rewarding content creators for their effort and engagement. However, it has a significant drawback when it comes to the dissemination of technical content.
 
-## 3. There are no ads
-This aspect of Medium appears like it should be a good thing, but there are a few reasons why this is not the
+The program, by tying financial rewards to reads and interactions, inadvertently incentivises increases in quantity over quality. For the technical sphere, this means a proliferation of articles of dubious nature, designed to attract engagement. This sets a precarious stage where sensationalism triumphs over substance, pollluting the field of technical articles with potentially misleading information.
+
+## 3. It is ad-free
+At first glance, Medium’s ad-free platform appears like a sanctuary for readers tired of the relentless ad bombardments on
 <div class="-mt-32 relative z-10">
   <div class="w-full h-[86px] bg-gradient-to-t from-page to-transparent"></div>
   <div class="w-full h-64 bg-page px-[8vw] text-3xl text-center">
