@@ -14,7 +14,7 @@ const { post, display = "full" } = Astro.props;
     style={`background-image: url(${post.data.image?.url});`}
     href={`/blog/posts/${post.slug}`}>
     <div class="bg-white bg-opacity-80 backdrop-blur-sm p-2 mt-16 rounded-sm group-hover:outline outline-primary">
-        <div class="flex justify-between">
+        <div class="grid grid-cols-[1fr_auto] justify-between">
             <h1 transition:name={`title-${post.slug}`} class="text-lg lg:text-xl font-bold">{post.data.title}</h1>
             <p class="text-sm">{post.data.date.toISOString().split('T')[0]}</p>
         </div>    
