@@ -28,5 +28,7 @@ At first glance, Medium’s ad-free platform appears like a sanctuary for reader
   <div class="w-full h-[86px] bg-gradient-to-t from-page to-transparent"></div>
   <div class="w-full h-64 bg-page px-[8vw] text-3xl text-center">
     Upgrade to mioi.io Blog Premium™ to continue reading this article
+    <br/><br/>
+    <a class="cursor-pointer" onclick="alert('🤔')">Click here</a> to learn more
   </div>
 </div>
