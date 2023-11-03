@@ -1,7 +1,7 @@
 ---
 title: "10 reasons why I exclude Medium from my search results when looking for technical articles"
 description: "Discover why I think Medium.com is a bad platform for publishing technical articles."
-date: 2023-09-05T09:56:00+2:00
+date: 2023-11-03T15:19:00+2:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 image:
   url: "/assets/images/blog/10-reasons-medium_banner.png"
