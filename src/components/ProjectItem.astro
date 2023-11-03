@@ -6,11 +6,12 @@ type Props = {
 }
 
 const { project } = Astro.props;
-const banner = project.data.banner ?? project.data.image;
+const bannerUrl = project.data.banner?.url ?? project.data.image;
+const bannerAnchor = project.data.banner?.anchor ?? "center top";
 ---
 <a href={`/projects/${project.slug}`}>
     <div class="m-2 shadow-md hover:shadow-lg cursor-pointer overflow-x-clip">
-        {banner && <div style={`background-image: url(${banner});`} class="bg-cover bg-[center_top] h-48 rounded-t-md min-h-[6rem]" />}
+        {bannerUrl && <div style={`background-image: url(${bannerUrl}); background-position: ${bannerAnchor}`} class="bg-cover h-48 rounded-t-md min-h-[6rem]" />}
         <div class="py-2 px-4">
             <h2 class="text-2xl my-2">{project.data.title}</h2>
             <p class="my-2">

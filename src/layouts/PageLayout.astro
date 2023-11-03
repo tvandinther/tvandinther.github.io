@@ -1,17 +1,19 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { type Position } from '../types/types';
 
 type Props = {
     pageTitle: string;
     bannerImage?: string;
+    bannerAlign?: Position | undefined;
 };
 
-const { pageTitle, bannerImage } = Astro.props;
+const { pageTitle, bannerImage: bannerUrl, bannerAlign = "top" } = Astro.props;
 ---
 <BaseLayout pageTitle={pageTitle}>
     <slot name="head" slot="head" />
     <div class="relative flex justify-center w-full overflow-x-clip">
-        {bannerImage && <img src={bannerImage} class="relative mx-8 max-w-4xl" /> }
+        {bannerUrl && <div style={`background-image: url(${bannerUrl}); background-position: ${bannerAlign}`} class="relative max-w-4xl h-56 bg-cover w-full" /> }
         <div class="absolute bottom-0 max-w-4xl p-1 bg-white w-full bg-opacity-40 backdrop-blur border-t border-opacity-50 border-white">
             <slot name="sub-navigation" />
         </div>
