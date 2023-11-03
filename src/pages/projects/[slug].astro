@@ -20,15 +20,18 @@ type Props = {
 const { project } = Astro.props;
 const { Content } = await project.render();
 ---
-<PageLayout pageTitle="Egg Inc. Companion App" bannerImage={project.data.banner ?? "/assets/images/projects_banner.png"}>
+<PageLayout pageTitle="Egg Inc. Companion App" 
+    bannerImage={project.data.banner?.url ?? "/assets/images/projects_banner.png"}
+    bannerAlign={project.data.banner?.anchor}
+>
     <Fragment slot="sub-navigation">
         <ProjectsNavigation />
     </Fragment>
     <PageTitle>{project.data.title}</PageTitle>
     {project.data.image && <img src={project.data.image} class="m-auto w-full h-auto shadow-sm border-2 rounded border-gray-300">}
     <div class="flex mb-2">
-        {project.data.url && <Button link={project.data.url}>Go to site</Button>}
-        {project.data.sourceCodeUrl && <Button link={project.data.sourceCodeUrl}>Source code</Button>}
+        {project.data.url && <Button external link={project.data.url}>Go to site</Button>}
+        {project.data.sourceCodeUrl && <Button external link={project.data.sourceCodeUrl}>Source code</Button>}
     </div>
     <div class="prose-lg lg:prose-2xl prose-stone">
         <Content />
