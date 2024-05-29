@@ -84,20 +84,13 @@
     unist-util-visit-parents "^6.0.0"
     vfile "^6.0.1"
 
-"@astrojs/partytown@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-2.0.0.tgz#b67eb04a3ad9557c1a86a0086b6b66704539e5f9"
-  integrity sha512-WKyWs3TdxAG4b0+vkMWwDProatsikfvpjJQ+IIDEI7QvPBmdIbD9BDfuGgKIETnmkA1DxFj9G3jiGn2DGiJKzg==
+"@astrojs/partytown@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-2.1.0.tgz#a539946dd233af57b5ef478120690d0838202734"
+  integrity sha512-9fjvTx2hTQpirUh1HnZZtFQaBz2R5ixrrmU/Zam3VZ9CoR3frqtnqg/Dt/i5C3UAlwiN0i8VuKxPx5cHP8yY5A==
   dependencies:
-    "@builder.io/partytown" "^0.8.0"
-    mrmime "^1.0.1"
-
-"@astrojs/prefetch@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/prefetch/-/prefetch-0.4.0.tgz#e7099d9fd4d846502468ee833aca7ced8b07a465"
-  integrity sha512-TTlVJcBrVv2R10Owsbl4tizvcRV+MuQsh4ZwIn2hU3XvzvaacIw4/2bzQ3WcYwQhc3t72t6E1vLdvtnXo0xyEA==
-  dependencies:
-    throttles "^1.0.1"
+    "@builder.io/partytown" "^0.10.1"
+    mrmime "^2.0.0"
 
 "@astrojs/prism@^3.1.0":
   version "3.1.0"
@@ -369,10 +362,10 @@
     "@babel/helper-validator-identifier" "^7.24.6"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.8.0.tgz#98543c1a5ba204d6b950edb53ab8a50b7df125d3"
-  integrity sha512-M6H7nSMwW2dHd1/MQ+9J1Jqdw22uhl1nKv90kIiL9G7gjFVqqouQp4qSS1oZclmtW1XjAa4Q5UnbHB4iytmxZA==
+"@builder.io/partytown@^0.10.1":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.10.2.tgz#102c909f805c945a638e249275003ef6ba828287"
+  integrity sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==
 
 "@emmetio/abbreviation@^2.3.3":
   version "2.3.3"
@@ -3243,11 +3236,6 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
-mrmime@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-1.0.1.tgz#5f90c825fad4bdd41dc914eff5d1a8cfdaf24f27"
-  integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
-
 mrmime@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-2.0.0.tgz#151082a6e06e59a9a39b46b3e14d5cfe92b3abb4"
@@ -4207,11 +4195,6 @@ tailwindcss@^3.0.24:
     postcss-value-parser "^4.2.0"
     quick-lru "^5.1.1"
     resolve "^1.22.1"
-
-throttles@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/throttles/-/throttles-1.0.1.tgz"
-  integrity sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
