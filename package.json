@@ -21,7 +21,7 @@
   },
   "engines": {
     "yarn": ">=1.22.22",
-    "node": "20.14.0"
+    "node": "18.17.1"
   },
   "devDependencies": {
     "@jsdevtools/rehype-inline-svg": "^1.1.4",
