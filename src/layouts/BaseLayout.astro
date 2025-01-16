@@ -2,7 +2,7 @@
 import Header from '@components/Header.astro';
 // import Footer from '@components/Footer.astro';
 import SideNavigation from "@components/SideNavigation.astro";
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 type Props = {
     pageTitle: string;
@@ -32,7 +32,7 @@ const { pageTitle } = Astro.props;
     gtag('config', 'G-8PPBKZ5GD1');
     </script>
     <title>{pageTitle}</title>
-    <ViewTransitions />
+    <ClientRouter />
 </head>
 <body class="bg-page overflow-x-clip">
     <Header />
@@ -41,7 +41,6 @@ const { pageTitle } = Astro.props;
     <!-- <Footer /> -->
 </body>
 <script>
-    // @ts-ignore
     window.scrollHiding = {header: true, footer: true};
 </script>
 </html>
