@@ -3,7 +3,7 @@
 pkgs.mkShell {
   nativeBuildInputs = with pkgs.buildPackages; [
     git
-    yarn
+    yarn-berry
     nodejs_20
   ];
 

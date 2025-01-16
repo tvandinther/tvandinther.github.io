@@ -20,7 +20,7 @@
     "typescript": "^5.2.2"
   },
   "engines": {
-    "yarn": ">=1.22.22",
+    "yarn": ">=4.5.3",
     "node": "20.18.1"
   },
   "devDependencies": {
