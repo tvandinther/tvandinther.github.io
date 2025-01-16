@@ -3,13 +3,16 @@ title: "Refactoring With Partial Application"
 description: "..."
 date: 2023-03-13T10:18:00+12:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
+# image:
+#   url: "/assets/images/blog/refactor-partial-application.png"
+#   alt: "Blog post banner image"
 draft: true
 author: "Tom van Dinther"
 tags: ["functional programming", "refactoring"]
 categories: ["refactoring"]
-featured: true
+featured: false
 ---
-Partial application is a useful concept from the functional programming paradigm. It takes a function of *n* arguments and returns the same function requiring a subset of it’s arguments. This concept can be a useful tool when refactoring code, and if the language you work with offers the ability to work with lambda expressions or other forms of anonymous functions, you can easily perform this refactor.
+Partial application is a useful concept from the functional programming paradigm. It takes a function of *n* arguments and returns the same function requiring a subset of its arguments. This concept can be a useful tool when refactoring code, and if the language you work with offers the ability to work with lambda expressions or other forms of anonymous functions, you can easily perform this refactor.
 
 > **Note:** The number of arguments a function operates on is known as it’s arity, with special terminology:  
 **nullary** — f()  
@@ -33,7 +36,7 @@ In this example, we took the function `Add` and partially applied it to create a
 
 ```csharp
 IEnumerable<int> Range(int startInclusive, int endExclusive, int step);
-IEnumerable<int> RangeFrom1(int step, int endExclusive) => Iterate(1, endExclusive, step);
+IEnumerable<int> RangeFrom1(int step, int endExclusive) => Range(1, endExclusive, step);
 ```
 
 # The Simple Refactor
@@ -48,8 +51,8 @@ public static class BonusCalculator {
         {
             PerformanceGrade.SmashedIt => CalculateBonus(salary, 0.05m),
             PerformanceGrade.OnTopOfIt => CalculateBonus(salary, 0.025m),
-            PerformanceGrade.StepItUp => CalculateBonus(salary, 0.0m),
             PerformanceGrade.LearningIt => CalculateBonus(salary, 0.01m),
+            PerformanceGrade.StepItUp => CalculateBonus(salary, 0.0m),
             _ => throw new UnreachableException($"Non-exhaustive pattern matching on {typeof(PerformanceGrade)}")
         };
     }
@@ -58,7 +61,7 @@ public static class BonusCalculator {
 }
 ```
 
-Notice how we repeat the same code `CalculateBonus(salary, ...)` in the switch expression. We can use our newly learned partial application tool to remove this duplication by defining a new local function with the salary partially applied.
+Notice how we repeat the same code `CalculateBonus(salary, ...)` in the switch expression. While there are many possible refactors we could use to improve this function, let's use our newly learned partial application tool to remove this duplication by defining a new local function with the salary partially applied.
 
 ```csharp
 public static class BonusCalculator {
@@ -125,8 +128,6 @@ Console.WriteLine(add1.Invoke(2)); // 3
 
 The factory pattern is extremely common in object-oriented code, but can be easily and succinctly expressed in terms of the partial application of functions. Using partial application, we cut down the lines of code used to express the idea significantly and removed the layer of indirection caused by using the factory pattern. Dependency injection is a common use-case for using the factory pattern and partial function application is one of the tools functional programmers use to address this.
 
-Next time you see the factory pattern, consider whether it could be improved with a refactor into a partially applied function. The factory and created class could likely coexist in a static class providing a namespace, positively increasing the cohesion in your code.
-
 ```csharp
 public static class Addition
 {
@@ -141,8 +142,4 @@ Console.WriteLine(add1(2)); // 3
 > You can control the exports of your namespace by using access modifiers, just like if you were to mark a class as `private` or `internal`. This way, users of the addition module must use the `AddN` constructor. The operand could just as easily be a database connection string.
 > 
 
-## But what if the dependency is used in multiple methods?
-
-Suppose the dependency was a database connection. Your factory class might accept a database connection string and return a database connection object with multiple methods relating to the connection.
-
-Passing this database connection object around is no different than passing around the blueprint used to create it. The code that would otherwise be in the object’s method is now encapsulated in the partial applicator. Think of the partial applicator as a method builder. Application and invocation are now distinct steps, giving you more control over how you use the code.
+Next time you see the factory pattern, consider whether it could be improved with a refactor into a partially applied function. The factory and created class could likely coexist in a static class providing a namespace, positively increasing the cohesion in your code.
