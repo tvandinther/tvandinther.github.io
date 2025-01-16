@@ -6,10 +6,11 @@ date: 2023-11-10T21:56:00+1:00
 image:
   url: "/assets/images/blog/text-templating-outperforms-populariactool_banner.webp"
   alt: "Blog post banner image"
+draft: false
 author: "Tom van Dinther"
 tags: ["DevOps"]
 categories: ["Discussion"]
-featured: true
+featured: false
 ---
 With the proliferation of infrastructure-as-code (IaC), everybody from developers to infrastructure specialists are writing markup to declare their resources. IaC is just one part of the anything-as-code movement and I welcome it as a way to define anything from infrastructure to diagrams to documentation. The reason the anything-as-code movement is so popular is because of its natural synergy with version control systems (VCS). We glean all of the benefits of VCS such as scalability and replayability because we are simply dealing with text.
 
