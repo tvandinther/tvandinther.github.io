@@ -3,7 +3,7 @@ title: filedo
 description: A command-line utility to perform actions on targeted files.
 date: 2022-10-01T12:00:00+12:00
 banner: 
-  url: /assets/images/projects/filedo_banner.png
+  url: /assets/images/projects/filedo_banner.webp
   alt: filedo banner
 sourceCodeUrl: https://github.com/tvandinther/filedo
 ---

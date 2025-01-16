@@ -4,7 +4,7 @@ description: "Discover why I think Medium.com is a bad platform for publishing t
 date: 2023-11-03T15:19:00+2:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 image:
-  url: "/assets/images/blog/10-reasons-medium_banner.png"
+  url: "/assets/images/blog/10-reasons-medium_banner.webp"
   alt: "Blog post banner image"
 author: "Tom van Dinther"
 tags: ["Hot Take"]

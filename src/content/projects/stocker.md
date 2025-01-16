@@ -3,7 +3,7 @@ title: Stocker
 description: Automated build of container images from tags of external GitHub repositories.
 date: 2023-03-01T12:00:00+12:00
 banner: 
-  url: /assets/images/projects/stocker_banner.png
+  url: /assets/images/projects/stocker_banner.webp
   alt: banner
 sourceCodeUrl: https://github.com/tvandinther/stocker
 featured: false
@@ -12,4 +12,4 @@ I use containerised tools extensively. Rather than installing a tool locally for
 
 I purposefully designed stocker to be a self-contained GitHub repository meaning that anybody can fork the repository and make it fit their needs, whether tracking private repositories or pushing to their own container registry.
 
-![Stocker Architecture](/assets/images/projects/stocker_diagram_1.png)
+![Stocker Architecture](/assets/images/projects/stocker_diagram_1.webp)

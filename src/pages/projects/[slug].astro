@@ -21,7 +21,7 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 ---
 <PageLayout pageTitle="Egg Inc. Companion App" 
-    bannerImage={project.data.banner?.url ?? "/assets/images/projects_banner.png"}
+    bannerImage={project.data.banner?.url ?? "/assets/images/projects_banner.webp"}
     bannerAlign={project.data.banner?.anchor}
 >
     <Fragment slot="sub-navigation">

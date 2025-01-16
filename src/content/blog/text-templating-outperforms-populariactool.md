@@ -22,7 +22,7 @@ Developers with their love of {{favouriteProgrammingLanguage}} opt to taking pre
 
 Postprocessing your markup by supercharging it with macros is turning a string substitution engine into a full blown interpreter. You are left writing unchecked YAML, creating a worse experience than programming with a dynamically typed language and foolishly hoping that the JSON Schema magically downloaded into your VS Code session from one of the hundred installed extensions will save you.
 
-![Google Search: How to attach a debugger to YAML](/assets/images/google-how-to-attach-debugger-yaml.png)
+![Google Search: How to attach a debugger to YAML](/assets/images/google-how-to-attach-debugger-yaml.webp)
 
 I would like to draw your attention to another realm in which we take these different approaches to generating dynamic markup. The web. Specifically, HTML. JSX is an HTML preprocessor taken to the extreme as it allows you to generate HTML (markup) with JavaScript. But this produces its own problems and if you dislike JSX (in lieu of React), you probably have the same issues with CDKs. The primary isue is that logic permeates your markup reducing the expressiveness of the markup and the readability of the code. For some, this is considered the price for strong colocation, and that the drawbacks can be mitigated with strong design standards and patterns. Though any tool with sufficient footguns is not the right tool for the job.
 

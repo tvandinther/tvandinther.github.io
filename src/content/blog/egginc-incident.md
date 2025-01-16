@@ -4,7 +4,7 @@ description: "Delve into the Egg, Inc. incident where a complex interaction with
 date: 2023-05-12T12:49:00+12:00
 # lastUpdated: 2023-02-08T00:03:00+13:00
 image:
-  url: "/assets/images/blog/egginc-incident_banner.png"
+  url: "/assets/images/blog/egginc-incident_banner.webp"
   alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
