@@ -2,7 +2,7 @@
 title: Egg, Inc. Contract Calculator
 description: A contract search and calculator made for the mobile game Egg, Inc.
 date: 2019-06-01T12:00:00+12:00
-image: /assets/images/contractScreenshot_large.png
+image: /assets/images/contractScreenshot_large.webp
 url: /legacy/contract
 ---
 Shortly after I published my first farm value calculator for Egg, Inc., the game came out with a new feature called contracts. Contracts allowed players to join a co-operative effort to lay a certain number of eggs within a set time for rewards. When contracts were released, everyone wanted to know "will I complete this contract on time?". So this is what this calculator aimed to solve.

@@ -3,7 +3,7 @@ title: Fallible
 description: An idiomatic and monadic way to explicitly define, propagate and handle error states in C#.
 date: 2022-04-05T12:00:00+12:00
 banner: 
-  url: /assets/images/projects/fallible_banner.png
+  url: /assets/images/projects/fallible_banner.webp
   alt: Fallible banner
 sourceCodeUrl: https://github.com/tvandinther/filedo
 ---

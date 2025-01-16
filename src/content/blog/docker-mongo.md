@@ -3,7 +3,7 @@ title: "Creating a MongoDB instance with a web interface in Docker"
 description: "How to create a MongoDB instance with a web interface in Docker"
 date: 2021-09-02T12:59:47+12:00
 image:
-  url: "/assets/images/blog/docker-mongo_banner.png"
+  url: "/assets/images/blog/docker-mongo_banner.webp"
   alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"

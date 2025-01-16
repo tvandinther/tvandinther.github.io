@@ -2,7 +2,7 @@
 title: Egg, Inc. Companion App
 description: A fresh app housing the all new versions of the previous Egg, Inc. tools.
 date: 2021-06-01T12:00:00+12:00
-image: /assets/images/eggincappScreenshot.png
+image: /assets/images/eggincappScreenshot.webp
 url: https://egginc.mioi.io
 sourceCodeUrl: https://github.com/tvandinther/mioi_egginc_app
 featured: false
