@@ -20,9 +20,9 @@
     "typescript": "^5.2.2"
   },
   "engines": {
-    "yarn": ">=4.5.3",
     "node": "20.18.1"
   },
+  "packageManager": "yarn@4.5.3",
   "devDependencies": {
     "@jsdevtools/rehype-inline-svg": "^1.1.4",
     "@tailwindcss/typography": "^0.5.9"
