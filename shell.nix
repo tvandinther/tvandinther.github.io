@@ -5,6 +5,7 @@ pkgs.mkShell {
     git
     yarn-berry
     nodejs_20
+    libwebp
   ];
 
   shellHook = ''
