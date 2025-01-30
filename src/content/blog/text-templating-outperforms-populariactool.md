@@ -8,7 +8,7 @@ image:
   alt: "Blog post banner image"
 draft: false
 author: "Tom van Dinther"
-tags: ["DevOps", "Hot Take"]
+tags: ["DevOps", "Hot Take", "Configuration"]
 categories: ["Discussion"]
 featured: false
 ---

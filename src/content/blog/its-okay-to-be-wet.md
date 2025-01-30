@@ -6,7 +6,7 @@ date: 2023-03-21T22:50:00+12:00
 image:
   url: "/assets/images/blog/its-okay-to-be-wet_banner.webp"
   alt: "Blog post banner image"
-draft: true
+draft: false
 author: "Tom van Dinther"
 tags: ["Refactoring", "Abstraction", "Hot Take"]
 categories: ["Discussion"]
